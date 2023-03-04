@@ -151,8 +151,8 @@ body {
         height: 50px;
       }
 
-      .cards-img img {
-        width: 100%;
+      .cards-img {
+        display: none;
       }
 
       .cv-btn {
@@ -179,8 +179,9 @@ body {
         width: 80%;
         height: 300px;
         margin-bottom: 15px;
-        background-image: url("./assets/#.svg");
+        background-image: url("./assets/ic_languages.png");
         background-position: bottom right;
+        background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
         padding-top: 60px;
@@ -215,8 +216,9 @@ body {
         width: 80%;
         height: 300px;
         margin-bottom: 15px;
-        background-image: url("./assets/#.svg");
+        background-image: url("./assets/ic_framework.png");
         background-position: bottom right;
+        background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
         padding-top: 60px;
@@ -230,8 +232,9 @@ body {
         height: 300px;
         margin-bottom: 15px;
         justify-content: center;
-        background-image: url("./assets/#.svg");
+        background-image: url("./assets/ic_skills.png");
         background-position: bottom right;
+        background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
         padding-top: 60px;
@@ -303,33 +306,62 @@ body {
   }
 
   @media screen and (min-width: 701px) {
-    body {
-        background: #e5e5e5;
+
+    .navbar {
+      display: flex;
+      flex-direction: row;
+      align-items: first baseline;
+      justify-content: center;
     }
+    
+    .menu {
+      width: 100%;
+      height: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    .sections {
+      display: flex;
+      list-style: none;
+      margin-bottom: 2%;
+      position: absolute;
+      padding: 0%;
+    }
+    .sections li {
+      list-style: none;
+      margin-right: 20px;
+    }
+
+    .sections li a {
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      color: #1a2236;
+    }
+
     .hamburger {
+      width: 0px;
         display: none;
     }
     #intro {
         display: grid;
-        grid-column: auto auto;
-
+        grid-template-columns: auto auto;
     }
 
     h1 {
 
-        width: 330px;
         font-family: "Playfair Display";
         font-size: 58px;
         line-height: 100%;
         color: #1a2236;
-        margin-top: 70px;
-        margin-bottom: 10px;
-        padding-top: 50px;
       }
 
       h2 {
 
-        width: 150px;
+        /* width: 150px; */
         font-family: "Playfair Display";
         font-weight: 400;
         font-size: 50px;
@@ -338,7 +370,6 @@ body {
       }
 
       .intro p {
-        width: 100%;
         height: 95px;
         left: 16px;
         top: 180px;
@@ -351,15 +382,15 @@ body {
         font-size: 15px;
         line-height: 21px;
         letter-spacing: 0.09em;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        /* margin-top: 10px;
+        margin-bottom: 10px; */
       }
 
       .collab-btn {
         margin-left: 10%;
         margin-right: 10%;
         box-sizing: border-box;
-        width: 80%;
+        /* width: 80%; */
         height: 50px;
         left: 16px;
         top: 390px;
@@ -369,6 +400,11 @@ body {
 
       .img-intro-bottom {
         display: none;
+      }
+
+      .img-intro-right {
+        width: 100%;
+        padding-top: 50px;
       }
 
       .project-card-info {
@@ -441,19 +477,27 @@ body {
         color: #ffff;
       }
 
+      #about {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: auto auto;
+      }
+
       .assets {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 2px;
       }
 
       .languages {
         background: #1c528a;
         color: #ffff;
-        width: 80%;
+        /* width: 80%; */
         height: 300px;
         margin-bottom: 15px;
-        background-image: url("./assets/#.svg");
+        background-image: url("./assets/ic_languages.png");
         background-position: bottom right;
+        background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
         padding-top: 60px;
@@ -461,7 +505,7 @@ body {
       }
 
       .intro-about h4 {
-        width: 60px;
+        /* width: 60px; */
         height: 40px;
         left: 65px;
         font-family: "Poppins", sans-serif;
@@ -472,7 +516,7 @@ body {
       }
 
       .intro-about ul {
-        width: 88px;
+        /* width: 88px; */
         height: 135px;
         left: 65px;
         font-family: "Poppins", sans-serif;
@@ -485,11 +529,12 @@ body {
       .frameworks {
         background: #e2505c;
         color: #ffff;
-        width: 80%;
+        /* width: 80%; */
         height: 300px;
         margin-bottom: 15px;
-        background-image: url("./assets/#.svg");
+        background-image: url("./assets/ic_framework.png");
         background-position: bottom right;
+        background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
         padding-top: 60px;
@@ -499,11 +544,12 @@ body {
       .skills {
         background: #febf52;
         color: #ffff;
-        width: 80%;
+        /* width: 80%; */
         height: 300px;
         margin-bottom: 15px;
         justify-content: center;
-        background-image: url("./assets/#.svg");
+        background-image: url("./assets/ic_skills.png");
+        background-repeat: no-repeat;
         background-position: bottom right;
         display: flex;
         flex-direction: column;
@@ -512,37 +558,45 @@ body {
       }
 
       #contact {
-        background-image: url("./assets/mobile/intro_bgrd_top_right.svg");
-        background-position: top left;
+        background-image: url("./assets/top_left_cont.svg"), url("./assets/bottom_right_cont.svg");
+        background-position: top left, bottom right;
         background-repeat: no-repeat;
+        background-size: 15%;
         padding-top: 40px;
         margin-top: 20px;
+        height: 750px;
+      }
+
+      .get-strt-intro {
+        padding-top: 100px;
+        border: 1px solid black;
       }
 
       .frm ul {
         list-style: none;
         margin-bottom: 10px;
-        width: 100%;
+        width: 40%;
       }
 
       input {
         box-sizing: border-box;
-        width: 100%;
+        width: 40%;
         height: 55px;
         border: 1px solid #dfdfe0;
         border-radius: 8px;
         margin-bottom: 20px;
         padding-left: 5px;
+        margin-left: 20px;
       }
 
       textarea {
         box-sizing: border-box;
-        width: 100%;
+        width: 80%;
         height: 155px;
-        border: 1px solid #dfdfe0;
         border-radius: 8px;
         padding-top: 30px;
         padding-left: 5px;
+        margin-left: 20px;
       }
 
       #button {
@@ -551,6 +605,8 @@ body {
         font-family: "Poppins", sans-serif;
         font-weight: 600;
         font-size: 16px;
+        margin-top: 38px;
+        margin-left: 100px;
       }
 
       footer {
