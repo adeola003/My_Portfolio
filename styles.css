@@ -443,10 +443,11 @@ body {
     top: 1624px;
     align-items: center;
   }
+
   .deskno {
     display: none;
   }
-  
+
   .deskreduce {
     display: flex;
     flex-direction: column-reverse;
