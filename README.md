@@ -51,7 +51,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [<a href="" target="_blank">Online version</a>](#)
+- [<a href="https://adeola003.github.io/My_Portfolio/" target="_blank">Online version</a>](#)
 
 - [Watch Presentation](#)
 
@@ -78,7 +78,7 @@ Clone this repository to your desired folder:
 
 ## 👥 Authors <a name="authors"></a>
 
- **Author 1** **Muhammad Usman Aslam**
+ **Author 1** **Abdel-Khafid SALAOU**
 
 - GitHub: [@githubhandle](https://github.com/adeola003)
 - Twitter: [@twitterhandle](https://twitter.com/khadaf6)
