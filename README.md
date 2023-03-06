@@ -72,7 +72,7 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 - **cd your-folder**
-- **git clone https://github.com/adeola003/Portfolio_2.git**
+- **git clone https://github.com/adeola003/My_Portfolio.git**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
