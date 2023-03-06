@@ -41,7 +41,7 @@ body {
   }
 
   .intro {
-    width: 50%;
+    width: 100%;
   }
 
   h1 {
@@ -99,6 +99,22 @@ body {
     display: none;
   }
 
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  a {
+    width: 100%;
+  }
+
+  .cards-img {
+    width: 100%;
+    align-items: center;
+  }
+
   .project-card-info {
     display: flex;
     flex-direction: column;
@@ -150,10 +166,6 @@ body {
     line-height: 24px;
     text-align: center;
     height: 50px;
-  }
-
-  .cards-img {
-    display: none;
   }
 
   .cv-btn {
@@ -360,7 +372,6 @@ body {
   }
 
   h2 {
-    /* width: 150px; */
     font-family: "Playfair Display", sans-serif;
     font-weight: 400;
     font-size: 50px;
@@ -386,9 +397,8 @@ body {
   .collab-btn {
     margin-left: 10%;
     margin-right: 10%;
+    width: 45%;
     box-sizing: border-box;
-
-    /* width: 80%; */
     height: 50px;
     left: 16px;
     top: 390px;
@@ -405,6 +415,21 @@ body {
     padding-top: 50px;
   }
 
+  #projects {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-image: url("./assets/image-geometry_2.png"), url("./assets/image-geometry_3.png"), url("./assets/image-geometry_5.png");
+    background-position: center, bottom right, bottom left;
+    background-repeat: no-repeat;
+  }
+
+  #projects h2 {
+    transform: rotate(-90deg);
+    padding-left: 90px;
+    padding-top: 70px;
+    background-image: url("");
+  }
+
   .project-card-info {
     display: flex;
     flex-direction: column;
@@ -417,6 +442,16 @@ body {
     left: 0;
     top: 1624px;
     align-items: center;
+  }
+  .deskno {
+    display: none;
+  }
+  
+  .deskreduce {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 70%;
+    padding-left: 47%;
   }
 
   .tag-list {
@@ -490,8 +525,6 @@ body {
   .languages {
     background: #1c528a;
     color: #ffff;
-
-    /* width: 80%; */
     height: 300px;
     margin-bottom: 15px;
     background-image: url("./assets/ic_languages.png");
@@ -504,7 +537,6 @@ body {
   }
 
   .intro-about h4 {
-    /* width: 60px; */
     height: 40px;
     left: 65px;
     font-family: "Poppins", sans-serif;
@@ -515,7 +547,6 @@ body {
   }
 
   .intro-about ul {
-    /* width: 88px; */
     height: 135px;
     left: 65px;
     font-family: "Poppins", sans-serif;
@@ -528,8 +559,6 @@ body {
   .frameworks {
     background: #e2505c;
     color: #ffff;
-
-    /* width: 80%; */
     height: 300px;
     margin-bottom: 15px;
     background-image: url("./assets/ic_framework.png");
@@ -544,8 +573,6 @@ body {
   .skills {
     background: #febf52;
     color: #ffff;
-
-    /* width: 80%; */
     height: 300px;
     margin-bottom: 15px;
     justify-content: center;
