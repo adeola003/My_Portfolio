@@ -31,17 +31,38 @@ body {
     background-color: #e5e5e5;
   }
 
-  .menu {
+    .sections {
     display: none;
-  }
-
-  #intro {
-    display: flex;
-    flex-direction: row;
   }
 
   .intro {
     width: 100%;
+  }
+
+  .hamb {
+    position: fixed;
+  }
+
+  .active {
+    display: block;
+    text-align: center;
+    padding-top: 60px;
+    background-color: #e5e5e5;
+    filter: blur(1px);
+    width: 100%;
+    left: 0;
+    height: 610px;
+  }
+  .active a {
+    color: #000;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    filter: blur(1px);
+    width: 100%;
+    left: 0;
+    height: 610px;
   }
 
   h1 {
