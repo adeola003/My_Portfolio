@@ -44,9 +44,11 @@ body {
   }
 
   .active {
-    display: block;
-    text-align: center;
-    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     background-color: #e5e5e5;
     filter: blur(1px);
     width: 100%;
