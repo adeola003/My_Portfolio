@@ -31,8 +31,13 @@ body {
     background-color: #e5e5e5;
   }
 
-    .sections {
+  .sections {
     display: none;
+    top: 0;
+    left: 100%;
+    transition: left 0.8s, visibility 0.8s, opacity 0.4s;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .intro {
@@ -55,6 +60,7 @@ body {
     left: 0;
     height: 610px;
   }
+
   .active a {
     color: #000;
     font-family: "Poppins", sans-serif;
@@ -127,10 +133,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-  a {
-    width: 100%;
   }
 
   .cards-img {
