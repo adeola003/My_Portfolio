@@ -330,6 +330,13 @@ body {
     padding-left: 5px;
   }
 
+  #error-message {
+    display: none;
+    margin-top: 0%;
+    padding-top: 0%;
+    color: #ea0e20;
+  }
+
   #button {
     background: #1a2236;
     color: #ffff;
@@ -667,6 +674,12 @@ body {
     padding-top: 30px;
     padding-left: 5px;
     margin-left: 20px;
+  }
+
+  #error-message {
+    display: none;
+    color: #ea0e20;
+    padding-left: 600px;
   }
 
   #button {
