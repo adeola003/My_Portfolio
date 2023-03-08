@@ -31,17 +31,59 @@ body {
     background-color: #e5e5e5;
   }
 
-  .menu {
+  .sections {
     display: none;
-  }
-
-  #intro {
-    display: flex;
-    flex-direction: row;
+    top: 57px;
+    left: 100%;
+    transition: left 0.8s, visibility 0.8s, opacity 0.4s;
+    flex-direction: column;
+    align-items: flex-start;
+    background-image: url("./assets/left_pro3.svg"), url("./assets/left_pro3.svg");
+    background-repeat: no-repeat;
+    background-position: 80% 7%, 10% 90%;
+    background-size: 10%;
+    overflow: hidden;
   }
 
   .intro {
     width: 100%;
+  }
+
+  .hamb {
+    padding-top: 25px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .active {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    background-color: #e5e5e5;
+    width: 100%;
+    left: 0;
+    height: 610px;
+  }
+
+  .active li {
+    padding-right: 40px;
+    padding-top: 40px;
+    position: relative;
+    top: 60px;
+  }
+
+  .active a {
+    color: #000;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 100%;
+    left: 0;
+    height: 610px;
+    text-decoration: none;
   }
 
   h1 {
@@ -104,10 +146,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-  a {
-    width: 100%;
   }
 
   .cards-img {
@@ -252,6 +290,10 @@ body {
     flex-direction: column;
     padding-top: 60px;
     padding-left: 15%;
+  }
+
+  .noshow-mob {
+    display: none;
   }
 
   #contact {
