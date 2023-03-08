@@ -67,9 +67,10 @@ body {
   }
 
   .active li {
-    margin-bottom: 30px;
     padding-right: 40px;
-    padding-top: 60px;
+    padding-top: 40px;
+    position: relative;
+    top: 60px;
   }
 
   .active a {
@@ -78,7 +79,7 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
     width: 100%;
     left: 0;
     height: 610px;
