@@ -679,6 +679,7 @@ body {
   #error-message {
     display: none;
     color: #ea0e20;
+    padding-left: 600px;
   }
 
   #button {

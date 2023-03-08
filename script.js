@@ -33,12 +33,12 @@ const emailInput = document.querySelector("#mail");
 const errorMessage = document.querySelector("#error-message");
 
 form.addEventListener("submit", (event) => {
-  event.preventDefault();
+  
   const emailValue = emailInput.value;
-  if (emailValue !== emailValue.toLowerCase()) {
-    errorMessage.style.display = "flex";
-  } else {
+  if (emailValue == emailValue.toLowerCase()) {
     errorMessage.style.display = "none";
-    form.submit();
+  } else {
+    event.preventDefault();
+    errorMessage.style.display = "flex";
   }
 });
