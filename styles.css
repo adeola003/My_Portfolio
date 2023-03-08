@@ -40,8 +40,8 @@ body {
     align-items: flex-start;
     background-image: url("./assets/left_pro3.svg"), url("./assets/left_pro3.svg");
     background-repeat: no-repeat;
-    background-position: top right, bottom left;
-    background-size: 25%;
+    background-position: 80% 7%, 10% 90%;
+    background-size: 10%;
   }
 
   .intro {
@@ -65,12 +65,17 @@ body {
     height: 610px;
   }
 
+  .active li {
+    margin-bottom: 30px;
+  }
+
   .active a {
     color: #000;
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 35px;
+    font-size: 16px;
+    margin-bottom: 60px;
     width: 100%;
     left: 0;
     height: 610px;
@@ -281,6 +286,10 @@ body {
     flex-direction: column;
     padding-top: 60px;
     padding-left: 15%;
+  }
+
+  .noshow-mob {
+    display: none;
   }
 
   #contact {
