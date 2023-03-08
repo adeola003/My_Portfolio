@@ -28,17 +28,16 @@ menuLinks.forEach((menuLink) => {
 });
 
 // Contact form validation
-const form = document.querySelector(".frm");
-const emailInput = document.querySelector("#mail");
-const errorMessage = document.querySelector("#error-message");
+const form = document.querySelector('.frm');
+const emailInput = document.querySelector('#mail');
+const errorMessage = document.querySelector('#error-message');
 
-form.addEventListener("submit", (event) => {
-  
+form.addEventListener('submit', (event) => {
   const emailValue = emailInput.value;
-  if (emailValue == emailValue.toLowerCase()) {
-    errorMessage.style.display = "none";
+  if (emailValue === emailValue.toLowerCase()) {
+    errorMessage.style.display = 'none';
   } else {
     event.preventDefault();
-    errorMessage.style.display = "flex";
+    errorMessage.style.display = 'flex';
   }
 });
