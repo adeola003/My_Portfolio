@@ -67,6 +67,7 @@ body {
 
   .active li {
     margin-bottom: 30px;
+    padding-right: 40px;
   }
 
   .active a {
