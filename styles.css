@@ -42,6 +42,7 @@ body {
     background-repeat: no-repeat;
     background-position: 80% 7%, 10% 90%;
     background-size: 10%;
+    overflow: hidden;
   }
 
   .intro {
@@ -49,6 +50,7 @@ body {
   }
 
   .hamb {
+    padding-top: 25px;
     position: relative;
     margin-bottom: 20px;
   }
@@ -56,7 +58,7 @@ body {
   .active {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-content: center;
     align-items: center;
     background-color: #e5e5e5;
@@ -68,6 +70,7 @@ body {
   .active li {
     margin-bottom: 30px;
     padding-right: 40px;
+    padding-top: 30px;
   }
 
   .active a {
