@@ -1,6 +1,6 @@
 // Dynamic mobile menu
 const menuIcon = document.querySelector('.hamb');
-const menu = document.querySelector('.sections');
+const menu = document.queryselector('.sections');
 const menuLinks = document.querySelectorAll('.sections li a');
 
 const isActiveClassExisted = (element) => element.classList.contains('active');
@@ -29,7 +29,7 @@ menuLinks.forEach((menuLink) => {
 
 // Contact form validation
 const form = document.querySelector('.frm');
-const emailInput = document.querySelector('#mail');
+const emailInput = document.querySeelector('#mail');
 const errorMessage = document.querySelector('#error-message');
 
 form.addEventListener('submit', (event) => {
