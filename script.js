@@ -43,7 +43,7 @@ form.addEventListener('submit', (event) => {
 });
 
 // Popup window
-//creating the project section with js
+// 1- creating the project section with js
 const section = document.getElementById("projects");
 const projectsElements = document.createElement("projects-list");
 section.appendChild(projectsElements);
@@ -60,7 +60,7 @@ projectsElements.innerHTML = `
                 <li class="tags">Ruby on rails</li>
                 <li class="tags">Javascript</li>
             </ul>
-            <button class="see-proj-btn">See this project &rArr;</button>
+            <button class="see-proj-btn fst-btn">See this project &rArr;</button>
     </div>
 </div>
 <div class="project-card two">
@@ -74,7 +74,7 @@ projectsElements.innerHTML = `
                 <li class="tags">Ruby on rails</li>
                 <li class="tags">Javascript</li>
             </ul>
-            <button class="see-proj-btn">See this project &rArr;</button>
+            <button class="see-proj-btn sec-btn">See this project &rArr;</button>
     </div>
 </div>
 <div class="project-card three">
@@ -88,7 +88,7 @@ projectsElements.innerHTML = `
                 <li class="tags">Ruby on rails</li>
                 <li class="tags">Javascript</li>
             </ul>
-            <button class="see-proj-btn">See this project &rArr;</button>
+            <button class="see-proj-btn thd-btn">See this project &rArr;</button>
     </div>
 </div>
 <div class="project-card four">
@@ -102,7 +102,7 @@ projectsElements.innerHTML = `
                 <li class="tags">Ruby on rails</li>
                 <li class="tags">Javascript</li>
             </ul>
-            <button class="see-proj-btn">See this project &rArr;</button>
+            <button class="see-proj-btn frth-btn">See this project &rArr;</button>
     </div>
 </div>
 <div class="project-card deskreduce five">
@@ -116,7 +116,7 @@ projectsElements.innerHTML = `
                 <li class="tags">Ruby on rails</li>
                 <li class="tags">Javascript</li>
             </ul>
-            <button class="see-proj-btn">See this project &rArr;</button>
+            <button class="see-proj-btn fth-btn">See this project &rArr;</button>
     </div>
 </div>
 <div class="project-card deskno six">
@@ -130,101 +130,167 @@ projectsElements.innerHTML = `
                 <li class="tags">Ruby on rails</li>
                 <li class="tags">Javascript</li>
             </ul>
-            <button class="see-proj-btn">See this project &rArr;</button>
+            <button class="see-proj-btn sth-btn">See this project &rArr;</button>
     </div>
 </div>
-`
+`;
+//2- Creating the popup window
+//2-1 Storings cards informations
+const buttons = []
 
+const projectCards = [
+  {
+    id: 1,
+    class: "project-card one",
+    image: "./assets/projects/project_1.svg",
+    title: "Complex hydraulic systems models",
+    details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisiUt aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.`,
+    skills: {
+      skill1: "HTML/CSS",
+      skill2: "Ruby on rails",
+      skill3: "Javascript"
+    },
+    liveLink: "#",
+    sourceLink: "https://github.com/adeola003"
+  },
+  {
+    id: 2,
+    class: "project-card two",
+    image: "./assets/projects/project_2.svg",
+    title: "Hydraulic head loss calculator online",
+    details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+     sed do eiusmod tempor incididunt ut labore et dolore magna 
+    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+    laboris nisiUt aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet,
+     consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.`,
+    skills: {
+      skill1: "HTML/CSS",
+      skill2: "Ruby on rails",
+      skill3: "Javascript"
+    },
+    liveLink: "#",
+    sourceLink: "https://github.com/adeola003"
+  },
+  {
+    id: 3,
+    class: "project-card three",
+    image: "./assets/projects/project_3.svg",
+    title: "Online scientific calculator",
+    details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+     ullamco laboris nisiUt aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad 
+      minim veniam, quis nostrud exercitation ullamco laboris nisi.`,
+    skills: {
+      skill1: "HTML/CSS",
+      skill2: "Ruby on rails",
+      skill3: "Javascript"
+    },
+    liveLink: "#",
+    sourceLink: "https://github.com/adeola003"
+  },
+  {
+    id: 4,
+    class: "pproject-card four",
+    image: "./assets/projects/project_4.svg",
+    title: "Professional Portfolio",
+    details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+     do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+     ad minim veniam, quis nostrud exercitation ullamco laboris nisiUt aliquip 
+     ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+       quis nostrud exercitation ullamco laboris nisi.`,
+    skills: {
+      skill1: "HTML/CSS",
+      skill2: "Ruby on rails",
+      skill3: "Javascript"
+    },
+    liveLink: "#",
+    sourceLink: "https://github.com/adeola003"
+  },
+  {
+    id: 5,
+    class: "project-card five",
+    image: "./assets/projects/project_5.svg",
+    title: "Currency converter",
+    details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+    quis nostrud exercitation ullamco laboris nisiUt aliquip ex ea commodo consequat. 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.`,
+    skills: {
+      skill1: "HTML/CSS",
+      skill2: "Ruby on rails",
+      skill3: "Javascript"
+    },
+    liveLink: "#",
+    sourceLink: "https://github.com/adeola003"
+  },
+  {
+    id: 6,
+    class: "project-card six",
+    image: "./assets/projects/project_6.svg",
+    title: "Visit counter",
+    details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+    veniam, quis nostrud exercitation ullamco laboris nisiUt aliquip ex ea commodo consequat. 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.`,
+    skills: {
+      skill1: "HTML/CSS",
+      skill2: "Ruby on rails",
+      skill3: "Javascript"
+    },
+    liveLink: "#",
+    sourceLink: "https://github.com/adeola003"
+  }
+];
 
+// Get all project buttons
+const projectButtons = document.querySelectorAll(".see-proj-btn");
+const popSection = document.getElementsByClassName("pop-window")[0];
+console.log(popSection)
 
+// Loop through project buttons and add event listeners
+projectButtons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    console.log("Button clicked")
+    const projectDetails = document.createElement("div");
+    projectDetails.classList.add("project-details");
+    projectDetails.innerHTML = `
+      <div>
+        <button class="close-button">X</button>
+        <h2>${projectCards[index].title}</h2>
+        <img src="${projectCards[index].image}" alt="${projectCards[index].title}">
+        <p>${projectCards[index].details}</p>
+        <h3>Skills Used:</h3>
+        <ul>
+          <li>${projectCards[index].skills.skill1}</li>
+          <li>${projectCards[index].skills.skill2}</li>
+          <li>${projectCards[index].skills.skill3}</li>
+        </ul>
+        <a href="${projectCards[index].liveLink}" target="_blank">Live Site</a>
+        <a href="${projectCards[index].sourceLink}" target="_blank">Source Code</a>
+      </div>
+      <div>
+      <a href="#" ><img class="img1" src="./assets/projects/project_1.svg" alt="My first project"></a>
+      <a href="#" ><img class="img2" src="./assets/projects/project_2.svg" alt="My second project"></a>
+      <a href="#" ><img class="img3" src="./assets/projects/project_3.svg" alt="My third project"></a>
+      <a href="#" ><img class="img4" src="./assets/projects/project_4.svg" alt="My fourth project"></a>
+      <a href="#" ><img class="img5" src="./assets/projects/project_5.svg" alt="My fifth project"></a>
+      <a href="#" ><img class="img6" src="./assets/projects/project_6.svg" alt="My sixth project"></a>
+      </div>
+    `;
+    console.log(projectDetails);
+    popSection.appendChild(projectDetails);
 
+    // Add event listener to close button
+    const closeButton = projectDetails.querySelector(".close-button");
+    closeButton.addEventListener("click", () => {
+      projectDetails.remove();
+    });
+  });
+});
 
-
-
-
-// const projectCards = [
-//   {
-//     id: one,
-//     class: "project-card one",
-//     image: "#",
-//     title: "Complex hydraulic systems models",
-//     details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisiUt aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
-//     skills: {
-//       skill1: "HTML/CSS",
-//       skill2: "Ruby on rails",
-//       skill3: "Javascript"
-//     },
-//     liveLink: "#",
-//     sourceLink: "https://github.com/adeola003"
-//   },
-//   {
-//     id: two,
-//     class: "project-card two",
-//     image: "#",
-//     title: "Hydraulic head loss calculator online",
-//     details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisiUt aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
-//     skills: {
-//       skill1: "HTML/CSS",
-//       skill2: "Ruby on rails",
-//       skill3: "Javascript"
-//     },
-//     liveLink: "#",
-//     sourceLink: "https://github.com/adeola003"
-//   },
-//   {
-//     id: three,
-//     class: "project-card three",
-//     image: "#",
-//     title: "Online scientific calculator",
-//     details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisiUt aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
-//     skills: {
-//       skill1: "HTML/CSS",
-//       skill2: "Ruby on rails",
-//       skill3: "Javascript"
-//     },
-//     liveLink: "#",
-//     sourceLink: "https://github.com/adeola003"
-//   },
-//   {
-//     id: four,
-//     class: "pproject-card four",
-//     image: "#",
-//     title: "Professional Portfolio",
-//     details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisiUt aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
-//     skills: {
-//       skill1: "HTML/CSS",
-//       skill2: "Ruby on rails",
-//       skill3: "Javascript"
-//     },
-//     liveLink: "#",
-//     sourceLink: "https://github.com/adeola003"
-//   },
-//   {
-//     id: five,
-//     class: "project-card five",
-//     image: "#",
-//     title: "Currency converter",
-//     details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisiUt aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
-//     skills: {
-//       skill1: "HTML/CSS",
-//       skill2: "Ruby on rails",
-//       skill3: "Javascript"
-//     },
-//     liveLink: "#",
-//     sourceLink: "https://github.com/adeola003"
-//   },
-//   {
-//     id: six,
-//     class: "project-card six",
-//     title: "Visit counter",
-//     details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisiUt aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
-//     skills: {
-//       skill1: "HTML/CSS",
-//       skill2: "Ruby on rails",
-//       skill3: "Javascript"
-//     },
-//     liveLink: "#",
-//     sourceLink: "https://github.com/adeola003"
-//   }
-// ]
 
