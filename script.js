@@ -44,13 +44,13 @@ form.addEventListener('submit', (event) => {
 
 // Popup window
 // 1- creating the project section with js
-const section = document.getElementById("projects");
-const projectsElements = document.createElement("projects-list");
+const section = document.getElementById('projects');
+const projectsElements = document.createElement('projects-list');
 section.appendChild(projectsElements);
 projectsElements.innerHTML = `
 <h2 class="proh2">Projects</h2>
 <div class="project-card one">
-    <a href="assets\projects\project_1.svg"><img class="cards-img" src="./assets/projects/project_1.svg" alt="My first project"></a>
+    <a href="assetsprojectsproject_1.svg"><img class="cards-img" src="./assets/projects/project_1.svg" alt="My first project"></a>
     <div class="project-card-info">
         <h3>
             Complex hydraulic systems models
@@ -134,30 +134,30 @@ projectsElements.innerHTML = `
     </div>
 </div>
 `;
-//2- Creating the popup window
-//2-1 Storings cards informations
-const buttons = []
+// 2- Creating the popup window
+// 2-1 Storings cards informations
+const buttons = [];
 
 const projectCards = [
   {
     id: 1,
-    class: "project-card one",
-    image: "./assets/projects/project_1.svg",
-    title: "Complex hydraulic systems models",
-    details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisiUt aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.`,
+    class: 'project-card one',
+    image: './assets/projects/project_1.svg',
+    title: 'Complex hydraulic systems models',
+    details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisiUt aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
     skills: {
-      skill1: "HTML/CSS",
-      skill2: "Ruby on rails",
-      skill3: "Javascript"
+      skill1: 'HTML/CSS',
+      skill2: 'Ruby on rails',
+      skill3: 'Javascript',
     },
-    liveLink: "#",
-    sourceLink: "https://github.com/adeola003"
+    liveLink: '#',
+    sourceLink: 'https://github.com/adeola003',
   },
   {
     id: 2,
-    class: "project-card two",
-    image: "./assets/projects/project_2.svg",
-    title: "Hydraulic head loss calculator online",
+    class: 'project-card two',
+    image: './assets/projects/project_2.svg',
+    title: 'Hydraulic head loss calculator online',
     details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
      sed do eiusmod tempor incididunt ut labore et dolore magna 
     aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
@@ -165,36 +165,36 @@ const projectCards = [
      consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
       magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.`,
     skills: {
-      skill1: "HTML/CSS",
-      skill2: "Ruby on rails",
-      skill3: "Javascript"
+      skill1: 'HTML/CSS',
+      skill2: 'Ruby on rails',
+      skill3: 'Javascript',
     },
-    liveLink: "#",
-    sourceLink: "https://github.com/adeola003"
+    liveLink: '#',
+    sourceLink: 'https://github.com/adeola003',
   },
   {
     id: 3,
-    class: "project-card three",
-    image: "./assets/projects/project_3.svg",
-    title: "Online scientific calculator",
+    class: 'project-card three',
+    image: './assets/projects/project_3.svg',
+    title: 'Online scientific calculator',
     details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
      ullamco laboris nisiUt aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur
       adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad 
       minim veniam, quis nostrud exercitation ullamco laboris nisi.`,
     skills: {
-      skill1: "HTML/CSS",
-      skill2: "Ruby on rails",
-      skill3: "Javascript"
+      skill1: 'HTML/CSS',
+      skill2: 'Ruby on rails',
+      skill3: 'Javascript',
     },
-    liveLink: "#",
-    sourceLink: "https://github.com/adeola003"
+    liveLink: '#',
+    sourceLink: 'https://github.com/adeola003',
   },
   {
     id: 4,
-    class: "pproject-card four",
-    image: "./assets/projects/project_4.svg",
-    title: "Professional Portfolio",
+    class: 'pproject-card four',
+    image: './assets/projects/project_4.svg',
+    title: 'Professional Portfolio',
     details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
      do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
      ad minim veniam, quis nostrud exercitation ullamco laboris nisiUt aliquip 
@@ -202,62 +202,62 @@ const projectCards = [
       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
        quis nostrud exercitation ullamco laboris nisi.`,
     skills: {
-      skill1: "HTML/CSS",
-      skill2: "Ruby on rails",
-      skill3: "Javascript"
+      skill1: 'HTML/CSS',
+      skill2: 'Ruby on rails',
+      skill3: 'Javascript',
     },
-    liveLink: "#",
-    sourceLink: "https://github.com/adeola003"
+    liveLink: '#',
+    sourceLink: 'https://github.com/adeola003',
   },
   {
     id: 5,
-    class: "project-card five",
-    image: "./assets/projects/project_5.svg",
-    title: "Currency converter",
+    class: 'project-card five',
+    image: './assets/projects/project_5.svg',
+    title: 'Currency converter',
     details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
     quis nostrud exercitation ullamco laboris nisiUt aliquip ex ea commodo consequat. 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
     ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.`,
     skills: {
-      skill1: "HTML/CSS",
-      skill2: "Ruby on rails",
-      skill3: "Javascript"
+      skill1: 'HTML/CSS',
+      skill2: 'Ruby on rails',
+      skill3: 'Javascript',
     },
-    liveLink: "#",
-    sourceLink: "https://github.com/adeola003"
+    liveLink: '#',
+    sourceLink: 'https://github.com/adeola003',
   },
   {
     id: 6,
-    class: "project-card six",
-    image: "./assets/projects/project_6.svg",
-    title: "Visit counter",
+    class: 'project-card six',
+    image: './assets/projects/project_6.svg',
+    title: 'Visit counter',
     details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
     veniam, quis nostrud exercitation ullamco laboris nisiUt aliquip ex ea commodo consequat. 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
     labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.`,
     skills: {
-      skill1: "HTML/CSS",
-      skill2: "Ruby on rails",
-      skill3: "Javascript"
+      skill1: 'HTML/CSS',
+      skill2: 'Ruby on rails',
+      skill3: 'Javascript',
     },
-    liveLink: "#",
-    sourceLink: "https://github.com/adeola003"
-  }
+    liveLink: '#',
+    sourceLink: 'https://github.com/adeola003',
+  },
 ];
 
 // Get all project buttons
-const projectButtons = document.querySelectorAll(".see-proj-btn");
-const popSection = document.getElementsByClassName("pop-window")[0];
-console.log(popSection)
+const projectButtons = document.querySelectorAll('.see-proj-btn');
+const popSection = document.getElementsByClassName('pop-window')[0];
+console.log(popSection);
 
 // Loop through project buttons and add event listeners
 projectButtons.forEach((button, index) => {
-  button.addEventListener("click", () => {
-    console.log("Button clicked")
-    const projectDetails = document.createElement("div");
-    projectDetails.classList.add("project-details");
+  button.addEventListener('click', () => {
+    console.log('Button clicked');
+    const projectDetails = document.createElement('div');
+    projectDetails.classList.add('project-details');
     projectDetails.innerHTML = `
       <div>
         <button class="close-button">X</button>
@@ -286,11 +286,9 @@ projectButtons.forEach((button, index) => {
     popSection.appendChild(projectDetails);
 
     // Add event listener to close button
-    const closeButton = projectDetails.querySelector(".close-button");
-    closeButton.addEventListener("click", () => {
+    const closeButton = projectDetails.querySelector('.close-button');
+    closeButton.addEventListener('click', () => {
       projectDetails.remove();
     });
   });
 });
-
-

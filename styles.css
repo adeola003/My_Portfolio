@@ -711,7 +711,7 @@ body {
     justify-content: space-between;
   }
 
-/* Popup styling */
+  /* Popup styling */
 
   .pop-window {
     position: absolute;
@@ -719,32 +719,32 @@ body {
     height: 1711px;
     left: 70px;
     top: 70px;
-    background: #FFFFFF;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
     color: #1a2236;
   }
-  
+
   .popup {
     max-width: 80%;
     max-height: 80%;
     overflow-y: auto;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 20px;
     text-align: center;
   }
-  
+
   .popup h2 {
     font-size: 2rem;
     margin-bottom: 20px;
   }
-  
+
   .popup p {
     font-size: 1.2rem;
     margin-bottom: 20px;
   }
-  
+
   .popup .close-btn {
     position: absolute;
     top: 10px;
@@ -752,37 +752,36 @@ body {
     font-size: 1.5rem;
     cursor: pointer;
   }
-  
+
   .popup .links {
     display: flex;
     justify-content: center;
     margin-top: 20px;
   }
-  
+
   .popup .links a {
     margin: 0 10px;
     font-size: 1.2rem;
   }
-  
+
   .popup .skills {
     display: flex;
     justify-content: center;
     margin-top: 20px;
   }
-  
+
   .popup .skills ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-  
+
   .popup .skills ul li {
     margin-right: 10px;
     font-size: 1.2rem;
   }
-  
+
   .popup .skills ul li:last-child {
     margin-right: 0;
   }
-  
 }
