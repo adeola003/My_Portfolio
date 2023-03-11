@@ -863,10 +863,10 @@ body {
 
   .active-pop {
     position: absolute;
-    width: 90%;
-    height: 2111px;
-    left: 90px;
-    top: 150vh;
+    width: 100%;
+    height: 1511px;
+    left: 40px;
+    top: 100vh;
     background: #e5e5e5;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
     color: #1a2236;
@@ -923,40 +923,41 @@ body {
 
   .alt-img-cont {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex-shrink: inherit;
-    margin-top: 50px;
   }
 
   .all-pop-proj {
-    width: 16.37%;
+    width: 25%;
+  }
+
+  .all-pop-proj img {
+    width: 100%;
   }
 
   .pop-details {
     display: flex;
-    width: 800px;
-    margin-left: 30%;
-    margin-right: 20%;
+    width: 65%;
+    margin-left: 129px;
+    margin-right: 20vh;
     margin-top: 5%;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 27px;
     color: #1a2236;
   }
 
   .pop-links {
-    margin-left: 13%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-left: 8px;
+    display: grid;
+    grid-template-columns: auto auto;
   }
 
   .live-btn {
+    display: flex;
     margin-right: 3%;
     margin-top: 3%;
+    margin-left: 120px;
     padding-top: 8px;
     padding-left: 18px;
     border: 1px solid black;
@@ -972,6 +973,7 @@ body {
   }
 
   .source-btn {
+    display: flex;
     margin-right: 20%;
     margin-top: 3%;
     margin-left: 1%;
@@ -990,10 +992,10 @@ body {
   }
 
   .navigation-links {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: auto auto;
     align-items: center;
-    margin-left: 27%;
+    margin-left: 115px;
     margin-top: 70px;
   }
 
