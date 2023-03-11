@@ -948,7 +948,7 @@ body {
   }
 
   .pop-links {
-    margin-left: 7%;
+    margin-left: 13%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -993,7 +993,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 23%;
+    margin-left: 27%;
     margin-top: 70px;
   }
 
