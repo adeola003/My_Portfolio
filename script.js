@@ -1,6 +1,6 @@
 // Dynamic mobile menu
 const menuIcon = document.querySelector('.hamb');
-const menu = document.queryselector('.sections');
+const menu = document.querySelector('.sections');
 const menuLinks = document.querySelectorAll('.sections li a');
 
 const isActiveClassExisted = (element) => element.classList.contains('active');
@@ -29,7 +29,7 @@ menuLinks.forEach((menuLink) => {
 
 // Contact form validation
 const form = document.querySelector('.frm');
-const emailInput = document.querySeelector('#mail');
+const emailInput = document.querySelector('#mail');
 const errorMessage = document.querySelector('#error-message');
 
 form.addEventListener('submit', (event) => {
@@ -45,12 +45,13 @@ form.addEventListener('submit', (event) => {
 // Popup window
 // 1- creating the project section with js
 const section = document.getElementById('projects');
-const projectsElements = document.createElement('projects-list');
+const projectsElements = document.createElement('div');
+projectsElements.classList.add('projects-list');
 section.appendChild(projectsElements);
 projectsElements.innerHTML = `
 <h2 class="proh2">Projects</h2>
 <div class="project-card one">
-    <a href="assetsprojectsproject_1.svg"><img class="cards-img" src="./assets/projects/project_1.svg" alt="My first project"></a>
+    <a href="#"><img class="cards-img" src="./assets/projects/project_1.svg" alt="My first project"></a>
     <div class="project-card-info">
         <h3>
             Complex hydraulic systems models
@@ -64,7 +65,7 @@ projectsElements.innerHTML = `
     </div>
 </div>
 <div class="project-card two">
-    <a href="#"><img class="cards-img" src="./assets/projects/project_2.svg" alt="My second project"></a>
+    <a href="#"><img class="cards-img mini-card" src="./assets/projects/project_2.svg" alt="My second project"></a>
     <div class="project-card-info deskno">
         <h3>
             Hydraulic head loss calculator online
@@ -78,7 +79,7 @@ projectsElements.innerHTML = `
     </div>
 </div>
 <div class="project-card three">
-    <a href="#"><img class="cards-img" src="./assets/projects/project_3.svg" alt="My third project"></a>
+    <a href="#"><img class="cards-img mini-card" src="./assets/projects/project_3.svg" alt="My third project"></a>
     <div class="project-card-info deskno">
         <h3>
             Online scientific calculator
@@ -92,7 +93,7 @@ projectsElements.innerHTML = `
     </div>
 </div>
 <div class="project-card four">
-    <a href="#"><img class="cards-img" src="./assets/projects/project_4.svg" alt="My fourth project"></a>
+    <a href="#"><img class="cards-img mini-card" src="./assets/projects/project_4.svg" alt="My fourth project"></a>
     <div class="project-card-info deskno">
         <h3>
             Professional Portfolio
@@ -120,7 +121,7 @@ projectsElements.innerHTML = `
     </div>
 </div>
 <div class="project-card deskno six">
-    <a href="#"><img class="cards-img" src="./assets/projects/project_6.svg" alt="My sixth project"></a>
+    <a href="#"><img class="cards-img mini-card" src="./assets/projects/project_6.svg" alt="My sixth project"></a>
     <div class="project-card-info">
         <h3>
             Visit counter
@@ -132,12 +133,11 @@ projectsElements.innerHTML = `
             </ul>
             <button class="see-proj-btn sth-btn">See this project &rArr;</button>
     </div>
+    <div class="modal-overlay"></div>
 </div>
 `;
 // 2- Creating the popup window
 // 2-1 Storings cards informations
-const buttons = [];
-
 const projectCards = [
   {
     id: 1,
@@ -250,44 +250,50 @@ const projectCards = [
 // Get all project buttons
 const projectButtons = document.querySelectorAll('.see-proj-btn');
 const popSection = document.getElementsByClassName('pop-window')[0];
-console.log(popSection);
 
 // Loop through project buttons and add event listeners
 projectButtons.forEach((button, index) => {
   button.addEventListener('click', () => {
-    console.log('Button clicked');
     const projectDetails = document.createElement('div');
+    popSection.classList.remove('pop-window');
+    popSection.classList.add('active-pop');
     projectDetails.classList.add('project-details');
+    projectsElements.classList.add('proj-lock');
     projectDetails.innerHTML = `
-      <div>
         <button class="close-button">X</button>
-        <h2>${projectCards[index].title}</h2>
-        <img src="${projectCards[index].image}" alt="${projectCards[index].title}">
-        <p>${projectCards[index].details}</p>
-        <h3>Skills Used:</h3>
-        <ul>
+        <h2 class="pop-title">${projectCards[index].title}</h2>
+        <ul class="pop-skills">
           <li>${projectCards[index].skills.skill1}</li>
           <li>${projectCards[index].skills.skill2}</li>
           <li>${projectCards[index].skills.skill3}</li>
         </ul>
-        <a href="${projectCards[index].liveLink}" target="_blank">Live Site</a>
-        <a href="${projectCards[index].sourceLink}" target="_blank">Source Code</a>
-      </div>
-      <div>
-      <a href="#" ><img class="img1" src="./assets/projects/project_1.svg" alt="My first project"></a>
-      <a href="#" ><img class="img2" src="./assets/projects/project_2.svg" alt="My second project"></a>
-      <a href="#" ><img class="img3" src="./assets/projects/project_3.svg" alt="My third project"></a>
-      <a href="#" ><img class="img4" src="./assets/projects/project_4.svg" alt="My fourth project"></a>
-      <a href="#" ><img class="img5" src="./assets/projects/project_5.svg" alt="My fifth project"></a>
-      <a href="#" ><img class="img6" src="./assets/projects/project_6.svg" alt="My sixth project"></a>
-      </div>
+        <div class="main-img-cont"><img class="pop-main-img" src="${projectCards[index].image}" alt="${projectCards[index].title}"></div>
+        <div class="alt-img-cont">
+            <a class="all-pop-proj" href="#" ><img class="img1" src="./assets/projects/project_1.svg" alt="My first project"></a>
+            <a class="all-pop-proj" href="#" ><img class="img2" src="./assets/projects/project_2.svg" alt="My second project"></a>
+            <a class="all-pop-proj" href="#" ><img class="img3" src="./assets/projects/project_3.svg" alt="My third project"></a>
+            <a class="all-pop-proj" href="#" ><img class="img4" src="./assets/projects/project_4.svg" alt="My fourth project"></a>
+            <a class="all-pop-proj" href="#" ><img class="img5" src="./assets/projects/project_5.svg" alt="My fifth project"></a>
+            <a class="all-pop-proj" href="#" ><img class="img6" src="./assets/projects/project_6.svg" alt="My sixth project"></a>
+        </div>
+        <p class="pop-details">${projectCards[index].details}</p>
+        <div class="pop-links">
+        <a class="live-btn" href="${projectCards[index].liveLink}" target="_blank">Live Site</a>
+        <a class="source-btn" href="${projectCards[index].sourceLink}" target="_blank">Source Code</a>
+        </div>
+        <div class="navigation-links">
+        <a class="nextprev" href="#" target="_blank">&larr; Previous project</a>
+        <a class="nextprev" href="#" target="_blank">Next project &rarr;</a>
+        </div>
     `;
-    console.log(projectDetails);
     popSection.appendChild(projectDetails);
 
     // Add event listener to close button
     const closeButton = projectDetails.querySelector('.close-button');
     closeButton.addEventListener('click', () => {
+      popSection.classList.remove('active-pop');
+      projectsElements.classList.remove('proj-lock');
+      popSection.classList.add('pop-window');
       projectDetails.remove();
     });
   });
