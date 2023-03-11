@@ -279,7 +279,7 @@ projectButtons.forEach((button, index) => {
         <p class="pop-details">${projectCards[index].details}</p>
         <div class="pop-links">
         <a class="live-btn" href="${projectCards[index].liveLink}" target="_blank">Live Site</a>
-        <a class="source-btn" href="${projectCards[index].sourceLink}" target="_blank">Source Code</a>
+        <a class="source-btn" href="${projectCards[index].sourceLink}" target="_blank">See source</a>
         </div>
         <div class="navigation-links">
         <a class="nextprev" href="#" target="_blank">&larr; Previous project</a>
